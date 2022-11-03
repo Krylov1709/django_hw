@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from measurement.models import Sensor
+
+
+@admin.register(Sensor)
+class SensorAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'description']
