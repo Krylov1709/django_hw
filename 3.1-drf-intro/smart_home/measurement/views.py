@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from measurement.models import Sensor, Measurements
-from measurement.serializers import SensorSerializer, MeasurementSerializer
+from measurement.models import Sensor, Measurement
+from measurement.serializers import SensorSerializer, MeasurementAddSerializer
 
 
 class SensorsViewSet(ModelViewSet):
@@ -8,6 +8,6 @@ class SensorsViewSet(ModelViewSet):
     serializer_class = SensorSerializer
 
 
-class MeasurementViewSet(ModelViewSet):
-    queryset = Measurements.objects.all()
-    serializer_class = MeasurementSerializer
+class MeasurementsViewSet(ModelViewSet):
+    queryset = Measurement.objects.all()
+    serializer_class = MeasurementAddSerializer
