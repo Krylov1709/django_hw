@@ -19,7 +19,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-# TODO: подключите `AdvertisementViewSet`
+router.register('advertisements/', AdvertisementViewSet)
 
 
 urlpatterns = [
